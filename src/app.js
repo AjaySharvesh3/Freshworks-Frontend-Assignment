@@ -1,9 +1,5 @@
-function listOfNames(countries) {
-    console.log(countries);
-    const names = countries.map(country => `<li>${country.name}</li>`).join("\n");
-    return `<ul>${names}</ul>`
-}
-
+/* Function used to get the Country Name from the user,
+   and showing data in the card-view manner with Image and Country Name */
 function searchCountries() {
     var name = document.getElementById('countryName');
     const fetchPromise = fetch("https://restcountries.eu/rest/v2/name/" + name.value);
@@ -11,7 +7,6 @@ function searchCountries() {
         return response.json();
     }).then(countries => {
         main.innerHTML = cardHTML(countries);
-        //main.innerHTML = countriesList(countries);
     }).catch(error => {
         console.log("Error: ", error);
         main.innerHTML = errorAlertHTML();
@@ -19,9 +14,12 @@ function searchCountries() {
     ;
 }
 
+/* Passing the list of countries to this function and getting populated by card-view,
+   byt showing Image and name of the Country */
 function cardHTML(countries) {
     var countryCards =  ('<div class="row" style="position: absolute; margin-left: 50px; margin-top: 50px" >');
 
+    // Looping every cards of data in it...
     countries.forEach(country => {
         countryCards += `<div class="column" style="margin-right: 20px">
                         <div class="card" onclick="setSelectedCountry('${country.name}')">
@@ -30,11 +28,12 @@ function cardHTML(countries) {
     });
 
     countryCards += '</div>';
-
-    console.log("countryCards:", countryCards);
     return countryCards;
 }
 
+/* [ADDITIONAL] Error Handling takes place,
+   if the user click search button without entering anything and,
+   misspelled or wrong name in search bar, will return error message */
 function errorAlertHTML() {
     var errorMessage = ('<div class="alert alert-error" role="alert">');
     errorMessage +=  ('No search results found!');
@@ -42,45 +41,36 @@ function errorAlertHTML() {
     return errorMessage;
 }
 
+/* This function handles, redirecting to next page,
+   and setting the data in LocalStorage,
+   to view details of country in the next page. */
 function setSelectedCountry(country) {
-    console.log(country);
     localStorage.setItem("CountryNames", country);
-    window.location.href = "app/country-details/country-details.html";
+    var name = document.getElementById('countryName');
+    localStorage.setItem("SearchTerm", name.value);
+    window.location.href = "country-details/country-details.html";
 }
 
-/*function cardHTML(countries) {
-    const countryCards = [];
-    countryCards.push('<div class="row">');
-
-    countries.forEach(country => {
-        countryCards.push(`<div class="column"><div class="card"><img src="${country.flag}" alt="flag" style="width:50%; height: 50%">
-    <div class="container"><h4><b>${country.name}</b></h4></div></div></div>`);
-    });
-
-    countryCards.push('</div>');
-
-    console.log("countryCards:", countryCards);
-    return countryCards;
-}*/
-
-/*function createNode(element) {
-    return document.createElement(element);
+/* Search will call searchCountries() function,
+   while typing and displaying in card. No need of button search. */
+function searchCountriesOnTypeAhead() {
+    var name = document.getElementById('countryName');
+    if (name.value.length > 1) {
+        searchCountries();
+    }
 }
 
-function append(parent, el) {
-    return parent.appendChild(el);
-}
+/* Initiate the search by calling searchCountries(),
+   after redirecting to Details Page to Home,
+   it shows the previous search results in card view */
+ function init() {
+    var name = localStorage.getItem('SearchTerm');
+    console.log("Name:", name);
+    if (name !== null && name !== '') {
+        document.getElementById("countryName").value = name;
+        searchCountries();
+    }
+ }
 
-function countriesList(countries) {
-    const ul = document.getElementById('countries');
-    return countries.map(function(country) {
-        let li = createNode('li'),
-            img = createNode('img'),
-            span = createNode('span');
-        img.src = country.flag;
-        span.innerHTML = `${country.name}`;
-        append(li, img);
-        append(li, span);
-        append(ul, li);
-    })
-}*/
+ // Calling Init function
+ init();

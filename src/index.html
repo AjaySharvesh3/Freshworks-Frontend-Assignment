@@ -6,21 +6,22 @@
   <title>Freshworks Frontend</title>
   <link rel = "stylesheet"
         type = "text/css"
-        href = "app.css" />
+        href = "styles.css" />
 </head>
 <body>
+<!-- Similar like nav bar -->
   <div class="topnav">
     <a class="active">Country App</a>
-    <!--<img src="img/earth.png" alt="logo" class="logo active"> Country Logo-->
   </div>
 <div class="home-page-header-container">
-  <h1>Explore the country by searching on it</h1>
+  <h1>Explore the countries by searching on it</h1>
   <div class="search-container">
     <form>
-      <input type="text" id="countryName" class="searchbar" placeholder="Search for Countries.."/>
+      <!-- [Additional] Search bar, featured as TypeAhead Functionality-->
+      <input type="text" id="countryName" class="searchbar" placeholder="Search for Countries.." onkeyup="searchCountriesOnTypeAhead()"/>
     </form>
   </div>
-  <button type="submit" onclick="searchCountries()" value="Search" class="submitButton">Search</button>
+  <!--<button type="submit" onclick="searchCountries()" value="Search" class="submitButton">Search</button>-->
 </div>
 
 <div id="main" class="div-main"></div>
