@@ -36,7 +36,7 @@ function cardHTML(countries) {
    misspelled or wrong name in search bar, will return error message */
 function errorAlertHTML() {
     var errorMessage = ('<div class="alert alert-error" role="alert">');
-    errorMessage +=  ('No search results found!');
+    errorMessage +=  ('No Search Results Found!');
     errorMessage += ('</div>');
     return errorMessage;
 }
