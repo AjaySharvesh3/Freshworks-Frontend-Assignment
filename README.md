@@ -32,27 +32,25 @@ A web application used to search countries and view the details of those countri
 
 ![alt text](img/screenshots/one.png)
 
-
+***
 
 **Hover Functionality**
 
 ![alt text](img/screenshots/two.png)
 
-
-
+***
 
 **Table View - Country Details Page**
 
 ![alt text](img/screenshots/three.png)
 
-
-
+***
 
 **Error Handling - Home Page**
 
 ![alt text](img/screenshots/five.png)
 
-
+***
 
 ##### Run the project
 
