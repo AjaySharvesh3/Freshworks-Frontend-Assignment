@@ -2,7 +2,7 @@
 
 ### Demo Link: https://ajaysharvesh3.github.io/
 
-##### Project Structure
+### Project Structure
 
     ├── Freshworks-FrontEnd                    
     │   ├── src  
