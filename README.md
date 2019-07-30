@@ -28,10 +28,9 @@ and clicking on that will direct to details page.
 + `[Additional]`After moving back to previous home page, still shows the previous results and manage your searching time.
 
 ##### Screenshots
-**TypeAhead Functionality - Home Page**
-
-![one](img/screenshots/one.png)
-
+**TypeAhead Functionality - Home Page**<br />
+<img src="/img/screenshots/one.png" height=400 width =600 />
+1
 
 **Hover Functionality**
 
