@@ -29,8 +29,7 @@ and clicking on that will direct to details page.
 
 ##### Screenshots
 **TypeAhead Functionality - Home Page**<br />
-<img src="/img/screenshots/one.png" height=400 width =600 />
-1
+<span style="display:block;text-align:center"><img src="/img/screenshots/one.png" height=300 width =530 /></span>
 
 **Hover Functionality**
 
