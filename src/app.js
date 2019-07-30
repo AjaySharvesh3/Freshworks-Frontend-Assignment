@@ -23,7 +23,9 @@ function cardHTML(countries) {
     var countryCards =  ('<div class="row" style="position: absolute; margin-left: 50px; margin-top: 50px" >');
 
     countries.forEach(country => {
-        countryCards += `<div class="column" style="margin-right: 20px"><div class="card" onclick="setSelectedCountry('${country.name}')"><img src="${country.flag}" alt="flag" style="width:50%; height: 50%">
+        countryCards += `<div class="column" style="margin-right: 20px">
+                        <div class="card" onclick="setSelectedCountry('${country.name}')">
+                        <img src="${country.flag}" alt="flag" style="width:50%; height: 50%">
     <div class="container"><h4><b>${country.name}</b></h4></div></div></div>`;
     });
 
@@ -43,7 +45,7 @@ function errorAlertHTML() {
 function setSelectedCountry(country) {
     console.log(country);
     localStorage.setItem("CountryNames", country);
-    window.location.href = "../../country-details.html";
+    window.location.href = "app/country-details/country-details.html";
 }
 
 /*function cardHTML(countries) {

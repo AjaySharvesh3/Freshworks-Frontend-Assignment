@@ -49,7 +49,7 @@ body {
 }
 
 .card:hover {
-    background-color: #78909C;
+    background-color: #2196f3;
     cursor: pointer;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     color: white;
@@ -169,10 +169,6 @@ body {
     cursor: pointer;
 }
 
-.topnav .search-container button:hover {
-
-}
-
 @media screen and (max-width: 600px) {
     .topnav .search-container {
         float: none;
@@ -208,7 +204,7 @@ table#country-table {
 }
 
 .home-button {
-    float: right;
+    float: left;
     margin-right: 30px;
     font-size: 18px;
 }
@@ -259,4 +255,21 @@ h1 {
     color: #0c5460;
     background-color: #d1ecf1;
     border-color: #bee5eb;
+}
+
+/*table {
+    border-collapse: collapse;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}*/
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse !important;
+    margin-left: 50px;
 }
