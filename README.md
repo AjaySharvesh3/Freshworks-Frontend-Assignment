@@ -1,6 +1,6 @@
 ## Freshwork Frontend Assignment
 
-#### Demo
+### Demo
 Link: https://ajaysharvesh3.github.io/
 
 ##### Project Structure
