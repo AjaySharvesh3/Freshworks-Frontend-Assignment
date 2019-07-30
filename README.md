@@ -51,7 +51,7 @@ A web application used to search countries and view the details of those countri
 
 **Error Handling - Home Page**
 
-![alt text](img/screenshots/four.png)
+![alt text](img/screenshots/five.png)
 
 
 
