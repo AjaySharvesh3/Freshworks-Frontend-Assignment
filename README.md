@@ -52,7 +52,7 @@ A web application used to search countries and view the details of those countri
 
 ***
 
-##### Run the project
+### Run the project
 
 Clone this project using git clone command, and view the `index.html` in a web browser.
 
