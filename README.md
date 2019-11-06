@@ -11,7 +11,7 @@
     |   |    ├── styles.css    
     |   |    ├── country-details
     |   |    |          ├── country-details.html
-    |   |    |          ├── country-details.js
+    |   |    |          ├── movie-details.js
     │   └── README.md  
     └── ...
 
