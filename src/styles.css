@@ -1,6 +1,11 @@
 /* Overall body Font-Family declared */
 body {
-    font-family: "Arial Rounded MT Bold", serif;
+    font-family: ProductSans, serif;
+}
+
+@font-face {
+    font-family: "ProductSans";
+    src: url("../fonts/product_sans_light.ttf");
 }
 
 /* Float columns side by side */
@@ -36,7 +41,7 @@ body {
     color: white;
 }
 
-/* Country Cards Display width,
+/* Movie Cards Display width,
    using Media Queries CSS.
     Responsive columns - one column layout (vertical) on small screens*/
 @media screen and (max-width: 2560px) {
@@ -193,7 +198,7 @@ h1 {
     border-radius: 6px;
 }
 
-.country-card-display {
+.Movie-card-display {
     display: inline-block;
 }
 
